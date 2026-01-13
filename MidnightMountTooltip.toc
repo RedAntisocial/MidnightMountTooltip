@@ -2,7 +2,7 @@
 ## Title: Midnight Mount Tootltip
 ## Notes: Adds information about the mount a player is currently riding to Blizzard's tooltip.
 ## Author: Periago - Dalaran
-## Version: 1.0.0
+## Version: 1.0.1
 ## IconTexture: Interface\Icons\ability_mount_dreadsteed
 ## X-Curse-Project-ID: 1427700
 ## X-WoWI-ID: 
