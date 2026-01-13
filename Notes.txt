@@ -1,1 +1,0 @@
-Notes about how we might structure classes, objects, or whatever.
