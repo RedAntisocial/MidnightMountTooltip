@@ -1,0 +1,13 @@
+## Interface: 120000, 120001
+## Title: Midnight Mount Tootltip
+## Notes: Adds information about the mount a player is currently riding to Blizzard's tooltip.
+## Author: Periago - Dalaran
+## Version: 1.0.0
+## IconTexture: Interface\Icons\inv_ring_oribos_01_copper
+## X-Curse-Project-ID: 
+## X-WoWI-ID: 
+## X-Wago-ID: 
+## DefaultState: enabled
+
+Mount\Mount.lua
+MidnightMountTooltip.lua

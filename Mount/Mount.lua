@@ -1,7 +1,7 @@
-local addonName, MountTooltip = ...;
+local addonName, MidnightMountTooltip = ...;
 
 -- parameters for mount objects, table used for metatable
-MountTooltip.Mount = {
+MidnightMountTooltip.Mount = {
   name = "",
   spellID = "",
   icon = "",
@@ -17,7 +17,7 @@ MountTooltip.Mount = {
 };
 
 -- constructor
-function MountTooltip.Mount:new(object)
+function MidnightMountTooltip.Mount:new(object)
   object = object or {};
   setmetatable(object, self);
   self.__index = self;
@@ -27,7 +27,7 @@ end
 
 -- simply sets mount information,
 -- returns true if successful, false if no mount was found
-function MountTooltip.Mount:getMountInfo(checkMountID)
+function MidnightMountTooltip.Mount:getMountInfo(checkMountID)
   local foundMountInfo = false;
 
   -- create temporary variables to store mount information in
