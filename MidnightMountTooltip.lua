@@ -16,7 +16,7 @@ local addonName, MidnightMountTooltip = ...;
   Gets called from MountTooltip.ProcessAuras, which cycles through this for
   each aura it finds.
 
-  See https://wowpedia.fandom.com/wiki/API_C_UnitAuras.GetAuraDataByIndex
+  See https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex
 ]]--
 function MidnightMountTooltip.CheckAurasForMount(auraData)
   -- early exit if no aura data
@@ -25,7 +25,7 @@ function MidnightMountTooltip.CheckAurasForMount(auraData)
   end
 
   -- mountIds are their own thing
-  -- See https://wowpedia.fandom.com/wiki/MountID
+  -- See https://warcraft.wiki.gg/wiki/MountID
   local mountID = C_MountJournal.GetMountFromSpell(auraData.spellId);
 
   -- if we found a mount from a spellID, then add it to the tooltip and exit
@@ -44,7 +44,7 @@ function MidnightMountTooltip.CheckAurasForMount(auraData)
     GameTooltip:AddLine(" ");
 
     -- formulate the icon string for text processing, ending space is important
-    -- See https://wowpedia.fandom.com/wiki/UI_escape_sequences
+    -- See https://warcraft.wiki.gg/wiki/UI_escape_sequences
     local iconString = "|T" .. mount.icon .. ":25" .. "|t ";
 
     -- add collection status
@@ -101,7 +101,7 @@ function MidnightMountTooltip.ProcessAuras(self)
     Theres no error reporting or way to show the user what happened if the
     player had too many buffs but indeed did have a mount.
 
-    See https://wowpedia.fandom.com/wiki/API_C_UnitAuras.GetAuraDataByIndex
+    See https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex
   ]]
   for i = 1, 40 do
     local auraData = C_UnitAuras.GetAuraDataByIndex(unit, i, "HELPFUL");
