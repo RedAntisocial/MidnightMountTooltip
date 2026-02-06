@@ -29,7 +29,7 @@ function MidnightMountTooltip.CheckAurasForMount(auraData)
   local mountID = C_MountJournal.GetMountFromSpell(auraData.spellId);
 
   -- if we found a mount from a spellID, then add it to the tooltip and exit
-  if (mountID ~= nil) then
+  if (mountID ~= nil and C_MountJournal.GetMountInfoByID(mountID)) then
 
     -- get mount information
     local mount = MidnightMountTooltip.Mount:new();
@@ -104,8 +104,8 @@ function MidnightMountTooltip.ProcessAuras(self)
     See https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex
   ]]
   for i = 1, 40 do
-    local auraData = C_UnitAuras.GetAuraDataByIndex(unit, i, "HELPFUL");
-    
+    local auraData = C_UnitAuras.GetAuraDataByIndex(unit, i, Enum.AuraFilters and Enum.AuraFilters.HELPFUL or AuraFilters and AuraFilters.HELPFUL);
+      
     -- stop if no more auras
     if not auraData then
       break;
