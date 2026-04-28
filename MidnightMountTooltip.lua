@@ -73,11 +73,11 @@ function MidnightMountTooltip.ProcessAuras(self)
     return;
   end
 
-   local name, unit = self:GetUnit();
+   local success, name, unit = pcall(function() return self:GetUnit() end);
 
   -- ! Early Return
   -- exit early if the unit is nil or false
-  if not unit then
+  if not success or not unit then
     return;
   end
 
