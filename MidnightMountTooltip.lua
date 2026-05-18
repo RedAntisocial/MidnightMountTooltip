@@ -19,8 +19,8 @@ local addonName, MidnightMountTooltip = ...;
   See https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex
 ]]--
 function MidnightMountTooltip.CheckAurasForMount(auraData)
-  -- early exit if no aura data
-  if not auraData then
+  -- early exit if no aura/spellId data
+  if not auraData or not auraData.spellId then
     return false;
   end
 
